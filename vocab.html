@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ vựng tiếng Hàn</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1f4068, #162447); /* Nền xanh dương đậm */
+            color: white; /* Chữ màu trắng */
+            font-family: sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .level-group {
+            background: rgba(255, 255, 255, 0.05); /* Hộp mờ sang trọng */
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px; /* Bo tròn khung */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h2 {
+            color: #00b4d8; /* Tiêu đề nhóm màu xanh ngọc */
+        }
+        .sub-levels {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .level-btn {
+            background-color: #2a5298; /* Nút bấm màu xanh dương */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px; /* Bo tròn nút bấm */
+            cursor: pointer;
+            transition: 0.3s;
+            min-width: 140px;
+        }
+        .level-btn:hover {
+            background-color: #00b4d8; /* Di chuột vào nút sẽ đổi sang xanh ngọc */
+        }
+        .back-link {
+            color: #00b4d8;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+</head>
+<body>
+    <h1>한국어 단어장 (Trang Từ Vựng Tiếng Hàn)</h1>
+    <p>Hãy chọn cấp độ từ vựng bạn muốn học hôm nay:</p>
+    <div class="sub-levels">
+        <h2>초급 (sơ cấp)</h2>
+            <a href="/lesson-sc1">
+                <button class="level-btn">초급 1 (Sơ cấp 1)</button>
+            </a>
+            <button class="level-btn" onclick="showVocab('content-sc2')">초급 2 (Sơ cấp 2)</button>
+        </div>
+    </div>
+    <div class="level-group">
+        <h2>중급 (Trung cấp)</h2>
+        <div class="sub-levels">
+            <button class="level-btn">중급 3 (Trung cấp 3)</button>
+            <button class="level-btn">중급 4 (Trung cấp 4)</button>
+            <button class="level-btn">중급 5 (Trung cấp 5)</button>
+            <button class="level-btn">중급 6 (Trung cấp 6)</button>
+         </div>
+    </div>
+
+    <div class="level-group">
+        <h2>토픽 시험 (Ôn thi TOPIK)</h2>
+        <div class="sub-levels">
+            <button class="level-btn exam-btn">TOPIK Từ vựng tuyển chọn</button>
+        </div>
+    </div>
+    <div class="back-home">
+            <a href="/" class="back-link">← Quay lại trang chủ</a>
+        <div id="vocab-content-area" style="margin-top: 30px;">
+
+    <!-- Bảng từ vựng Sơ cấp 1 -->
+    <div id="content-sc1" class="vocab-table-wrapper" style="display: none;">
+        <h3>초급 1 (Sơ cấp 1) - Từ vựng cơ bản</h3>
+        <!-- Khung chứa Flashcard lật mặt -->
+<div class="flashcard-container">
+    <div class="flashcard" onclick="this.classList.toggle('flipped')">
+        <!-- Mặt trước hiện tiếng Hàn -->
+        <div class="card-face card-front">
+            <span class="card-word">안녕하세요</span>
+            <span class="card-hint">(Bấm để xem nghĩa)</span>
+        </div>
+        <!-- Mặt sau hiện phiên âm và nghĩa tiếng Việt -->
+        <div class="card-face card-back">
+            <span class="card-meaning">Xin chào</span>
+            <span class="card-pronun">An-nyeong-ha-se-yo</span>
+        </div>
+    </div>
+</div>
+        <table class="vocab-table">
+            <tr>
+                <th>단어 (Từ)</th>
+                <th>발음 (Phát âm)</th>
+                <th>의미 (Ý nghĩa)</th>
+            </tr>
+            <tr>
+                <td>안녕하세요</td>
+                <td>An-nyeong-ha-se-yo</td>
+                <td>Xin chào</td>
+            </tr>
+            <tr>
+                <td>감사합니다</td>
+                <td>Gam-sa-ham-ni-da</td>
+                <td>Xin cảm ơn</td>
+            </tr>
+            <tr>
+                <td>사랑해</td>
+                <td>Sa-rang-hae</td>
+                <td>Tôi yêu bạn</td>
+            </tr>
+        </table>
+    </div>
+    <!-- Bảng từ vựng Sơ cấp 2 -->
+    <div id="content-sc2" class="vocab-table-wrapper" style="display: none;">
+        <h3>초급 2 (Sơ cấp 2) - Từ vựng giao tiếp</h3>
+        <table class="vocab-table">
+            <tr>
+                <th>단어 (Từ)</th>
+                <th>발음 (Phát âm)</th>
+                <th>의미 (Ý nghĩa)</th>
+            </tr>
+            <tr>
+                <td>학교</td>
+                <td>Hak-gyo</td>
+                <td>Trường học</td>
+            </tr>
+            <tr>
+                <td>친구</td>
+                <td>Chin-gu</td>
+                <td>Bạn bè</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+        </div>
+<script>
+    function showVocab(id) {
+        // Tìm và ẩn tất cả các bảng từ vựng đang hiển thị
+        var tables = document.getElementsByClassName('vocab-table-wrapper');
+        for (var i = 0; i < tables.length; i++) {
+            tables[i].style.display = 'none';
+        }
+        // Hiển thị duy nhất bảng từ vựng có ID được chọn
+        document.getElementById(id).style.display = 'block';
+    }
+</script>
+
+</body>
+<script>
+    // Hàm xử lý hiển thị bảng từ vựng theo ID
+    function showVocab(id) {
+        // Ẩn tất cả các bảng từ vựng đang có trước
+        var tables = document.getElementsByClassName('vocab-table-wrapper');
+        for (var i = 0; i < tables.length; i++) {
+            tables[i].style.display = 'none';
+        }
+        // Hiện bảng từ vựng được chọn
+        document.getElementById(id).style.display = 'block';
+    }
+</script>
+</html>

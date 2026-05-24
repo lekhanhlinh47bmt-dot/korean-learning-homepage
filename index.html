@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=10">
+    <title>한국어 정복</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{background: linear-gradient(135deg, #1f4068, #162447);
+            font-family: 'Noto sans KR', sans-serif
+            line-height: 1,7; /* khoảng cách dòng thoáng */
+            text-align: center;
+            padding-top: 50px;
+            color: #00b4d8;
+            min-height: 100vh;
+        }
+
+        p{font-size: 22px;
+
+            word-break: keep-all; /* giữ nguyên từ tiếng Hàn khi xuống dòng */
+        }.button-group{
+        h1 {
+            font-size: 70px;
+        }
+            díplay:flex;
+            justify-content:center;
+            gap: 15px
+            manrgin-top: 30px
+        }
+        .flag-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .flag-img {
+            width: 60px;
+            height: auto;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+        }
+
+        .flag-heart {
+            font-size: 24px;
+        }
+
+        .btn{
+            background-color: #00b4d8
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 2rem
+            font-family:'Noto Sans KR', sans-serif;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        @keyframes blingBling {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 8px #fff); }
+        }
+        .star {
+            position: absolute;
+            color: #ffffff;
+            font-size: 12px;
+            animation: blingBling 2s infinite ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <span class="star" style="top: 10%; left: 15%; animation-delay: 0s;">✨</span>
+    <span class="star" style="top: 25%; left: 80%; animation-delay: 0.5s;">✨</span>
+    <span class="star" style="top: 50%; left: 10%; animation-delay: 1s;">✨</span>
+    <span class="star" style="top: 75%; left: 85%; animation-delay: 1.5s;">✨</span>
+    <span class="star" style="top: 85%; left: 20%; animation-delay: 0.2s;">✨</span>
+    <span class="star" style="top: 15%; left: 50%; animation-delay: 0.8s;">✨</span>
+    <h1>안녕하세요!</h1>
+    <p>저의 한국어 학습 웹사이트에 오신 것을 환영합니다!</p>
+    <div class="flag-container">
+        <img src="{{ url_for('static', filename='vietnam.jpg') }}" alt="Cờ Việt Nam" class="flag-img">
+        <span class="flag-heart">❤️</span>
+        <img src="{{ url_for('static', filename='korea.jpg') }}" alt="Cờ Hàn Quốc" class="flag-img">
+    </div>
+<div class="button-group">
+    <a href="vocab">
+        <button class="btn">Từ vựng (어휘)</button>
+    </a>
+
+    <button class="btn">Ngữ pháp (문법)</button>
+    <button class="btn">Làm bài tập (퀴즈)</button>
+</div>
+</body>
+</html>
